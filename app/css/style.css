@@ -14,4 +14,26 @@ body {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
+
+h1 {
+  color: #4c4e61;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h2 {
+  color: #4c4e61;
+  font-weight: 200;
+  margin: 0;
+}
+
+header {
+  margin: 3rem 2rem;
+  text-align: center;
+}
+
+p {
+  color: #a3a5ae;
+}
 /*# sourceMappingURL=style.css.map */
