@@ -1,0 +1,45 @@
+.cardContainer {
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 3rem 2rem;
+  padding: 2rem;
+  border-top: 0.25rem solid black;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(24, 89, 185, 0.253);
+
+
+  &__cyan {
+    border-color: $cyan;
+  }
+  &__red {
+    border-color: $red;
+  }
+  &__orange {
+    border-color: $orange;
+  }
+  &__blue {
+    border-color: $blue;
+  }
+
+  &__title{
+      font-size: 1.5rem;
+      text-align: left;
+      margin:0;
+      color: $veryDarkBlue
+  }
+  &__desc {
+    font-size: 0.75rem;
+    color: $grayishBlue
+  }
+  &__icon {
+    margin-top: 1.2rem;
+    align-self: flex-end;
+  }
+
+}
