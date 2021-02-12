@@ -29,12 +29,35 @@ h2 {
 }
 
 header {
-  margin: 3rem 2rem;
+  margin: 6rem 2rem 5rem 2rem;
   text-align: center;
+}
+
+@media (min-width: 64em) {
+  header {
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 p {
   color: #a3a5ae;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-rows: repeat(1fr, 4);
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 64em) {
+  .cardContainer {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
 }
 
 .card {
@@ -42,27 +65,58 @@ p {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 3rem 2rem;
+  margin: 1rem 2rem;
   padding: 2rem;
   border-top: 0.25rem solid black;
   border-radius: 5px;
   box-shadow: 0 6px 12px rgba(24, 89, 185, 0.253);
 }
 
+@media (min-width: 64em) {
+  .card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 .card__cyan {
   border-color: #45d3d3;
+}
+
+@media (min-width: 64em) {
+  .card__cyan {
+    grid-area: 2 / 1 / span 2 / span 1;
+  }
 }
 
 .card__red {
   border-color: #ea5353;
 }
 
+@media (min-width: 64em) {
+  .card__red {
+    grid-area: 1 / 2 / span 2 / span 1;
+  }
+}
+
 .card__orange {
   border-color: #fcaf4a;
 }
 
+@media (min-width: 64em) {
+  .card__orange {
+    grid-area: 3 / 2/ span 2 / span 1;
+  }
+}
+
 .card__blue {
   border-color: #549ef2;
+}
+
+@media (min-width: 64em) {
+  .card__blue {
+    grid-area: 2 / 3 / span 2 / span 1;
+  }
 }
 
 .card__title {

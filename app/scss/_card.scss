@@ -1,5 +1,14 @@
 .cardContainer {
-
+  display: grid;
+  grid-template-rows: repeat(1fr, 4);
+  
+  margin-bottom: 3rem;
+  @include breakpoint-up(large) {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
 }
 
 .card {
@@ -7,39 +16,58 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 3rem 2rem;
+  margin: 1rem 2rem;
   padding: 2rem;
   border-top: 0.25rem solid black;
   border-radius: 5px;
   box-shadow: 0 6px 12px rgba(24, 89, 185, 0.253);
 
+  @include breakpoint-up(large) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
   &__cyan {
     border-color: $cyan;
+    @include breakpoint-up(large) {
+      //left middle
+      grid-area: 2 / 1 / span 2 / span 1;
+    }
   }
   &__red {
     border-color: $red;
+    @include breakpoint-up(large) {
+      //center top
+      grid-area: 1 / 2 / span 2 / span 1;
+    }
   }
   &__orange {
     border-color: $orange;
+    @include breakpoint-up(large) {
+      //center bottom
+      grid-area: 3 / 2/ span 2 / span 1;
+    }
   }
   &__blue {
     border-color: $blue;
+    @include breakpoint-up(large) {
+      //right middle
+      grid-area: 2 / 3 / span 2 / span 1;
+    }
   }
 
-  &__title{
-      font-size: 1.5rem;
-      text-align: left;
-      margin:0;
-      color: $veryDarkBlue
+  &__title {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0;
+    color: $veryDarkBlue;
   }
   &__desc {
     font-size: 0.75rem;
-    color: $grayishBlue
+    color: $grayishBlue;
   }
   &__icon {
     margin-top: 1.2rem;
     align-self: flex-end;
   }
-
 }
