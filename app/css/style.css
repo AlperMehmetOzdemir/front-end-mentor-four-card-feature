@@ -16,8 +16,14 @@ body {
 }
 
 h1, h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0;
+}
+
+@media (min-width: 64em) {
+  h1, h2 {
+    font-size: 2rem;
+  }
 }
 
 h1 {
