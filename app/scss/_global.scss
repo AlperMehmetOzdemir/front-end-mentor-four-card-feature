@@ -15,17 +15,19 @@ body {
   font-family: $fontFamily;
 }
 
+h1, h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
 h1 {
   color: $veryDarkBlue;
   font-weight: $fontBold;
-  font-size: 1.5rem;
-  margin: 0;
 }
 
 h2 {
   color: $veryDarkBlue;
   font-weight: $fontLight;
-  margin: 0;
 }
 
 header {
@@ -34,8 +36,7 @@ header {
 
   @include breakpoint-up(large){
     width: 30rem;
-    margin-left:auto;
-    margin-right: auto;
+    margin: 4rem auto 3rem auto;
   }
 }
 p {
